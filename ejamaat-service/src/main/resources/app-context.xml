@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:sec="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+ http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <sec:http pattern="/public/**" use-expressions="true" create-session="never">
+        <sec:intercept-url pattern="/public/**" access="isAnonymous()"/>
+        <sec:form-login login-page="/public/login"/>
+        <sec:form-login login-page="/public/persons"/>
+        <sec:form-login login-page="/public/countries"/>
+    </sec:http>
+
+ 	<sec:http pattern="/health/**" use-expressions="true" create-session="never">
+        <sec:intercept-url pattern="/health/**" access="isAnonymous()"/>
+        <sec:form-login login-page="/health"/>
+    </sec:http>
+
+	<sec:http pattern="/place/**" use-expressions="true" create-session="never">
+        <sec:intercept-url pattern="/place/**" access="isAnonymous()"/>
+        <sec:form-login login-page="/place"/>
+    </sec:http>
+
+    <sec:authentication-manager>
+    </sec:authentication-manager>
+
+    <bean id="forbiddenFilter" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
+</beans>

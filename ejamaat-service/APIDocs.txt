@@ -1,0 +1,22 @@
+http://localhost:8081/api/v1/place POST
+application/json
+{
+    "name": "Indore",
+    "latitude": 22.7000,
+    "longitude": -75.9000
+}
+
+http://localhost:8081/api/v1/place PUT
+application/json
+{
+	"id":1,
+    "name": "Indore",
+    "latitude": 22.7000,
+    "longitude": -75.2000
+}
+
+http://localhost:8081/api/v1/place GET
+
+http://localhost:8081/api/v1/place/1 GET
+
+http://localhost:8081/api/v1/place/1 DELETE
