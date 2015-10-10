@@ -1,4 +1,4 @@
-package com.mkanchwala.ejamaat.controller;
+package com.whiteledger.controller.cms;
 
 import com.google.common.base.Throwables;
 import com.google.common.collect.Lists;
@@ -14,14 +14,13 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
+public abstract class BaseController<T, ID extends Serializable> {
 
-public abstract class RESTController<T, ID extends Serializable> {
-
-    private Logger logger = LoggerFactory.getLogger(RESTController.class);
+    private Logger logger = LoggerFactory.getLogger(BaseController.class);
 
     private CrudRepository<T, ID> repo;
 
-    public RESTController(CrudRepository<T, ID> repo) {
+    public BaseController(CrudRepository<T, ID> repo) {
         this.repo = repo;
     }
 

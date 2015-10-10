@@ -1,4 +1,4 @@
-package com.mkanchwala.ejamaat;
+package com.whiteledger;
 
 import org.joda.time.DateTime;
 import org.springframework.boot.SpringApplication;

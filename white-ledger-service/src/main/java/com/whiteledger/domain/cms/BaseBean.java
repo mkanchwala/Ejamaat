@@ -1,4 +1,4 @@
-package com.mkanchwala.ejamaat.domain;
+package com.whiteledger.domain.cms;
 
 import java.io.Serializable;
 
@@ -11,9 +11,6 @@ import javax.persistence.PrePersist;
 @MappedSuperclass
 public abstract class BaseBean implements Serializable {
 	
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private Long id;
 

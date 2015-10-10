@@ -1,4 +1,4 @@
-package com.mkanchwala.ejamaat.domain;
+package com.whiteledger.domain.uam;
 
 import java.util.Date;
 
@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.whiteledger.domain.cms.BaseBean;
 
 @Entity
 @Table(name = "member")

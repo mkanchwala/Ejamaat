@@ -1,4 +1,4 @@
-package com.mkanchwala.ejamaat.domain;
+package com.whiteledger.domain.cms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

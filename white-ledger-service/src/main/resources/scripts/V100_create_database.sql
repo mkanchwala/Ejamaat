@@ -5,8 +5,8 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`ejamaat` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `ejamaat`;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`white_ledger` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `white_ledger`;
 
 /*Table structure for table `member` */
 DROP TABLE IF EXISTS `member`;
@@ -32,14 +32,14 @@ CREATE TABLE `place` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
-/*Table structure for table `sabeel` */
-DROP TABLE IF EXISTS `sabeel`;
-CREATE TABLE `sabeel` (
+/*Table structure for table `business` */
+DROP TABLE IF EXISTS `business`;
+CREATE TABLE `business` (
   `id` bigint(20) NOT NULL,
-  `sabeel_owner_id` bigint(20) DEFAULT NULL,
+  `business_owner_id` bigint(20) DEFAULT NULL,
   `family` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `sabeel_owner_id_UNIQUE` (`sabeel_owner_id`)
+  UNIQUE KEY `business_owner_id_UNIQUE` (`business_owner_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

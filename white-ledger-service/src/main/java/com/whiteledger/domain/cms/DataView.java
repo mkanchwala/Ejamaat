@@ -1,4 +1,4 @@
-package com.mkanchwala.ejamaat.domain;
+package com.whiteledger.domain.cms;
 public class DataView {
 	
 	public enum ViewEnum {
