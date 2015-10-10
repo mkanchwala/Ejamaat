@@ -1,5 +1,5 @@
 # WhiteLedger
-A Sample Enterprise Application for handling your Business.
+A Sample Enterprise Application for handling the Business.
 
 ### Brief Introduction :
 It is a simple app to maintain the Individuals Business Details, there trade offs, there expenditures etc.
