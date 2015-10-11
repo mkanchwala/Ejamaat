@@ -14,9 +14,12 @@ import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
 import com.fasterxml.jackson.datatype.joda.ser.DateTimeSerializer;
 import com.fasterxml.jackson.datatype.joda.ser.JacksonJodaFormat;
+import com.whiteledger.domain.cms.BaseBean;
+import com.whiteledger.domain.cms.PolymorphicBaseBean;
 
 @SpringBootApplication
 @ImportResource("classpath*:app-context.xml")
@@ -36,6 +39,8 @@ public class WhiteLedgerApp extends SpringBootServletInitializer {
         MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+		objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+		objectMapper.addMixInAnnotations(BaseBean.class, PolymorphicBaseBean.class);
         jsonConverter.setObjectMapper(objectMapper);
         return jsonConverter;
     }
