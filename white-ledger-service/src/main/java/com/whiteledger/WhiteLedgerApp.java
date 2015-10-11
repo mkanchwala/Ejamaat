@@ -20,7 +20,7 @@ import com.fasterxml.jackson.datatype.joda.ser.JacksonJodaFormat;
 
 @SpringBootApplication
 @ImportResource("classpath*:app-context.xml")
-public class EJamaatApp extends SpringBootServletInitializer {
+public class WhiteLedgerApp extends SpringBootServletInitializer {
 	
     @Bean
     public JodaModule jacksonJodaModule() {
@@ -54,10 +54,10 @@ public class EJamaatApp extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(EJamaatApp.class);
+        return application.sources(WhiteLedgerApp.class);
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(EJamaatApp.class, args);
+        SpringApplication.run(WhiteLedgerApp.class, args);
     }
 }
